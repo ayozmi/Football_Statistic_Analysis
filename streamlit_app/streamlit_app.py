@@ -5,14 +5,16 @@ import base64
 
 def load_data():
     """Load data from the SQL database."""
-    conn = sqlite3.connect('/path/to/database.sqlite')  # Update this path
+    # Assuming the data directory is at the root level of your project
+    conn = sqlite3.connect('data/database.sqlite')  # Updated path to the database
     df = pd.read_sql_query("SELECT * FROM statistics", conn)
     conn.close()
     return df
 
 def set_background(png_file):
     """Set a background image for the Streamlit app."""
-    with open(png_file, "rb") as image_file:
+    # Adjusted to use a relative path from streamlit_app.py location
+    with open(f"streamlit_app/assets/{png_file}", "rb") as image_file:  # Corrected path
         encoded = base64.b64encode(image_file.read()).decode()
     st.markdown(
         f"""
@@ -28,8 +30,8 @@ def set_background(png_file):
     )
 
 def main():
-    set_background('streamlit_app/assets/2022-04-18.jpg')  # Ensure correct path
-    st.title('Football Statistic Analysis', anchor=None)
+    set_background('2022-04-18.jpg')  # Ensure the path is corrected for the new structure
+    st.title('Football Statistic Analysis')
 
     with st.container():
         styled_container = f"""
@@ -51,7 +53,7 @@ def main():
         st.video('https://www.youtube.com/watch?v=0eOf-EOCzuw')
         
         # Display the UEFA banner at the bottom of the page within the styled container
-        st.image('streamlit_app/assets/uefa_banner.png', use_column_width=True)
+        st.image('streamlit_app/assets/uefa_banner.png', use_column_width=True)  # Correct path within the streamlit_app directory
         
         # Additional app content goes here
 
