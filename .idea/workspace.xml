@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="559e2cfe-bde8-46e0-83a4-c5f0c33a30a0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/audio/fc_barcelona.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/images/football.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/raw/appearances.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/raw/games.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/raw/leagues.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/raw/players.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/raw/shots.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/raw/teams.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/raw/teamstats.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/analysis.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fetch_api_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/fetch_api_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/process_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/streamlit_app/streamlit_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/streamlit_app/streamlit_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +77,7 @@
       <workItem from="1709764910027" duration="130000" />
       <workItem from="1709765057943" duration="2288000" />
       <workItem from="1709768456135" duration="3414000" />
-      <workItem from="1709820132944" duration="19647000" />
+      <workItem from="1709820132944" duration="20390000" />
     </task>
     <servers />
   </component>
