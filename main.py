@@ -21,7 +21,7 @@ def load_data():
 
 def set_background(png_file):
     """Set a background image for the Streamlit app."""
-    # Adjusted to use a relative path from streamlit_app.py location
+    # Adjusted to use a relative path from main.py location
     with open(f"{png_file}", "rb") as image_file:  # Corrected path
         encoded = base64.b64encode(image_file.read()).decode()
     st.markdown(
@@ -147,7 +147,7 @@ def plot_stats(name_stat, df_team_stats_names):
 
 
 def main():
-    set_background('../data/images/football.jpg')  # Ensure the path is corrected for the new structure
+    set_background('data/images/football.jpg')  # Ensure the path is corrected for the new structure
     st.title('Football Statistic Analysis! ⚽')
     st.write(
         "Football, is considered by many the world's game, "
@@ -156,7 +156,7 @@ def main():
         "data and statistics that offer insights into team and player performance, "
         "strategy effectiveness, and the overall dynamics of the game.")
     st.subheader("Let's start with the anthem of the best football team in the world!")
-    st.audio("../data/audio/fc_barcelona.mp3")
+    st.audio("data/audio/fc_barcelona.mp3")
     st.write("I get chills everytime I listen to this anthem.")
     st.subheader("Goals of this analysis:")
     st.write("In this analysis, we  will embark on a journey to explore the "
@@ -187,10 +187,10 @@ def main():
 
         # Display a video from a URL within the styled container
         # st.video('https://www.youtube.com/watch?v=0eOf-EOCzuw')
-        df_appearance = pd.read_csv('../data/raw/appearances.csv')
-        df_game = pd.read_csv('../data/raw/games.csv')
-        df_shots = pd.read_csv('../data/raw/shots.csv')
-        df_team_stats = pd.read_csv('../data/raw/teamstats.csv')
+        df_appearance = pd.read_csv('data/raw/appearances.csv')
+        df_game = pd.read_csv('data/raw/games.csv')
+        df_shots = pd.read_csv('data/raw/shots.csv')
+        df_team_stats = pd.read_csv('data/raw/teamstats.csv')
 
         # We need to make the result of each game numerical
         df_team_stats['result'] = df_team_stats['result'].map({'W': 1, 'L': 0, 'D': 2})
@@ -235,7 +235,7 @@ def main():
             "which makes the stat for the "
             "2019 season inaccurate.")
         # st.write(df_team_stats_season["goals"])
-        df_league = pd.read_csv("../data/raw/leagues.csv")
+        df_league = pd.read_csv("data/raw/leagues.csv")
         df_team_stats_league = pd.merge(df_team_stats, df_game, on="gameID", how="inner")
         df_team_stats_league = pd.merge(df_team_stats_league, df_league, on="leagueID", how="inner")
         df_team_stats_league_grouped = df_team_stats_league.groupby("name")["goals"].sum().reset_index()
@@ -321,7 +321,7 @@ def main():
                  "let's compare the teams of the top 5 league using the most "
                  "important metric in the game: Goals.")
         st.write("We will display a graph showing the top and bottom 10 clubs by goals in the top 5 competitions:")
-        df_team = pd.read_csv("../data/raw/teams.csv")
+        df_team = pd.read_csv("data/raw/teams.csv")
         df_team_stats_names = pd.merge(df_team_stats, df_team, on="teamID", how="inner")
         df_team_stats_grouped = df_team_stats_names.groupby("name").agg({
             'goals': 'sum',
@@ -338,7 +338,7 @@ def main():
                  "FC Barcelona followed by PSG and then Bayern Munich.")
         # </editor-fold>
         # <editor-fold desc="Compare players">
-        df_players = pd.read_csv("../data/raw/players.csv", encoding="latin1")
+        df_players = pd.read_csv("data/raw/players.csv", encoding="latin1")
         option1_selected = st.selectbox('Football Player 1', df_players['playerID'],
                                         format_func=lambda x: df_players[df_players['playerID'] == x]['name'].values[
                                             0], index=2034)

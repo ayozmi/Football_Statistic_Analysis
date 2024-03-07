@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="559e2cfe-bde8-46e0-83a4-c5f0c33a30a0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/streamlit_app/assets/2022-04-18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/streamlit_app/assets/my_video.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/streamlit_app/streamlit_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +79,7 @@
       <workItem from="1709764910027" duration="130000" />
       <workItem from="1709765057943" duration="2288000" />
       <workItem from="1709768456135" duration="3414000" />
-      <workItem from="1709820132944" duration="20390000" />
+      <workItem from="1709820132944" duration="20844000" />
     </task>
     <servers />
   </component>
